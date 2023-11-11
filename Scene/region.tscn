@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cap7nr54liyel"]
+
+[ext_resource type="Script" path="res://Src/region.gd" id="1_gd0yd"]
+
+[node name="Region" type="Node"]
+script = ExtResource("1_gd0yd")
+
+[node name="CountrySprite" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)

@@ -1,0 +1,85 @@
+[gd_scene load_steps=21 format=3 uid="uid://b1aumwyase5k1"]
+
+[ext_resource type="Texture2D" uid="uid://dw13s1ed4ih8w" path="res://Assets/Art/map_background.png" id="1_d856r"]
+[ext_resource type="PackedScene" uid="uid://cap7nr54liyel" path="res://Scene/region.tscn" id="2_uxgqf"]
+[ext_resource type="Texture2D" uid="uid://cy2qdbnb845hm" path="res://Assets/Art/north_america_usa.png" id="3_5hvfj"]
+[ext_resource type="Texture2D" uid="uid://drg8cp7fp0s0f" path="res://Assets/Art/north_america_greenland.png" id="4_1gdme"]
+[ext_resource type="Texture2D" uid="uid://dhqsjtn5c53cs" path="res://Assets/Art/north_america_canada.png" id="4_ionyw"]
+[ext_resource type="Texture2D" uid="uid://bidq85fltefsd" path="res://Assets/Art/central_america.png" id="5_2ty1p"]
+[ext_resource type="Texture2D" uid="uid://drc35mj7klxo8" path="res://Assets/Art/south_america_north.png" id="6_tfkpm"]
+[ext_resource type="Texture2D" uid="uid://b1sochtu3cuvq" path="res://Assets/Art/south_america_south.png" id="7_ik4xv"]
+[ext_resource type="Texture2D" uid="uid://bk8qkio4qxraf" path="res://Assets/Art/south_america_brazil.png" id="8_vnggf"]
+[ext_resource type="Texture2D" uid="uid://bniyr7n7us6e0" path="res://Assets/Art/africa_north.png" id="9_6mf3l"]
+[ext_resource type="Texture2D" uid="uid://dorckdyqfwno2" path="res://Assets/Art/africa_south.png" id="10_x4nru"]
+[ext_resource type="Texture2D" uid="uid://vw5vow8u6tic" path="res://Assets/Art/africa_central.png" id="11_butcd"]
+[ext_resource type="Texture2D" uid="uid://fqi78vfgm7yc" path="res://Assets/Art/europe.png" id="12_ot12q"]
+[ext_resource type="Texture2D" uid="uid://b8k0m8i0mhxun" path="res://Assets/Art/russia.png" id="13_8lqwd"]
+[ext_resource type="Texture2D" uid="uid://yqudngkdl732" path="res://Assets/Art/arabia.png" id="14_chgfx"]
+[ext_resource type="Texture2D" uid="uid://cfiefy5pofpov" path="res://Assets/Art/oceana_australia.png" id="15_3hfvi"]
+[ext_resource type="Texture2D" uid="uid://caotxl7s2x52h" path="res://Assets/Art/oceana_philipines.png" id="16_ek4ty"]
+[ext_resource type="Texture2D" uid="uid://buqqal1tv56gw" path="res://Assets/Art/asia_india.png" id="16_u68tu"]
+[ext_resource type="Texture2D" uid="uid://bcnqphd6w0o1c" path="res://Assets/Art/asia_east.png" id="17_33dwd"]
+[ext_resource type="Texture2D" uid="uid://bo2n3uts7qpb" path="res://Assets/Art/asia_japan.png" id="18_g03sk"]
+
+[node name="Map_1" type="Node"]
+
+[node name="BackgroundImage" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_d856r")
+
+[node name="Regions" type="Node" parent="."]
+
+[node name="NorthAmerica_USA" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("3_5hvfj")
+
+[node name="NorthAmerica_Greenland" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("4_1gdme")
+
+[node name="NorthAmerica_Canada" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("4_ionyw")
+
+[node name="CentralAmerica" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("5_2ty1p")
+
+[node name="SouthAmerica_North" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("6_tfkpm")
+
+[node name="SouthAmerica_South" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("7_ik4xv")
+
+[node name="SouthAmerica_East" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("8_vnggf")
+
+[node name="Africa_North" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("9_6mf3l")
+
+[node name="Africa_South" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("10_x4nru")
+
+[node name="Africa_Central" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("11_butcd")
+
+[node name="Europe" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("12_ot12q")
+
+[node name="Russia" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("13_8lqwd")
+
+[node name="MiddleEast" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("14_chgfx")
+
+[node name="Oceania_Australia" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("15_3hfvi")
+
+[node name="Oceania_Philipines" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("16_ek4ty")
+
+[node name="Asia_India" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("16_u68tu")
+
+[node name="Asia_East" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("17_33dwd")
+
+[node name="Asia_Japan" parent="Regions" instance=ExtResource("2_uxgqf")]
+region_graphic = ExtResource("18_g03sk")
