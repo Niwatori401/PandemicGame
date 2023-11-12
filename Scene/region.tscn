@@ -8,3 +8,9 @@ script = ExtResource("1_gd0yd")
 [node name="CountrySprite" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 scale = Vector2(0.6, 0.6)
+
+[node name="Hitbox" type="Area2D" parent="CountrySprite"]
+
+[connection signal="area_entered" from="CountrySprite/Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="mouse_entered" from="CountrySprite/Hitbox" to="." method="_on_hitbox_mouse_entered"]
+[connection signal="mouse_exited" from="CountrySprite/Hitbox" to="." method="_on_hitbox_mouse_exited"]
