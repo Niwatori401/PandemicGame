@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://b1aumwyase5k1"]
+[gd_scene load_steps=23 format=3 uid="uid://b1aumwyase5k1"]
 
 [ext_resource type="Texture2D" uid="uid://dw13s1ed4ih8w" path="res://Assets/Art/map_background.png" id="1_d856r"]
+[ext_resource type="Script" path="res://Src/map_1.gd" id="1_rtube"]
 [ext_resource type="PackedScene" uid="uid://cap7nr54liyel" path="res://Scene/region.tscn" id="2_uxgqf"]
 [ext_resource type="Texture2D" uid="uid://cy2qdbnb845hm" path="res://Assets/Art/north_america_usa.png" id="3_5hvfj"]
 [ext_resource type="Texture2D" uid="uid://drg8cp7fp0s0f" path="res://Assets/Art/north_america_greenland.png" id="4_1gdme"]
@@ -23,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://b2d5nx4f8p4x4" path="res://Scene/region_overview_dialog.tscn" id="21_l4jp5"]
 
 [node name="Map_1" type="Node"]
+script = ExtResource("1_rtube")
 
 [node name="BackgroundImage" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
@@ -104,3 +106,7 @@ region_graphic = ExtResource("18_g03sk")
 region_name = "Japan"
 
 [node name="RegionOverviewDialog" parent="." instance=ExtResource("21_l4jp5")]
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
