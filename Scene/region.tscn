@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Src/region.gd" id="1_gd0yd"]
 
-[node name="Region" type="Node"]
+[node name="Region" type="Node" groups=["region"]]
 script = ExtResource("1_gd0yd")
 
 [node name="CountrySprite" type="Sprite2D" parent="."]
@@ -12,5 +12,6 @@ scale = Vector2(0.6, 0.6)
 [node name="Hitbox" type="Area2D" parent="CountrySprite"]
 
 [connection signal="area_entered" from="CountrySprite/Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="input_event" from="CountrySprite/Hitbox" to="." method="_on_hitbox_input_event"]
 [connection signal="mouse_entered" from="CountrySprite/Hitbox" to="." method="_on_hitbox_mouse_entered"]
 [connection signal="mouse_exited" from="CountrySprite/Hitbox" to="." method="_on_hitbox_mouse_exited"]

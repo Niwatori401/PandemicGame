@@ -1,4 +1,6 @@
 extends Node
+signal show_info(region_info_dto: Dictionary)
+
 
 @export var region_graphic: Texture2D;
 @export var starting_color: Color = Color.DARK_GREEN;
@@ -49,10 +51,6 @@ func _ready():
 
 func _process(delta):
 	pass
-
-func get_external_spread_factor():
-	pass
-	
 	
 
 func get_total_population():
@@ -65,3 +63,8 @@ func _on_hitbox_mouse_entered():
 
 func _on_hitbox_mouse_exited():
 	$CountrySprite.set_modulate(self.current_color);
+
+# On click of region
+func _on_hitbox_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.pressed:
+		emit_signal("show_info", {"region_name":self.region_name});
